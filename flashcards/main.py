@@ -29,7 +29,7 @@ def login():
 
                 
 
-        if username == "new":
+        if username == "":
            
             while True:
                 new_username = input(" Choose a username: ").strip().lower()
