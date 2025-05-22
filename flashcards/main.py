@@ -32,7 +32,7 @@ def login():
         if username == "N":
            
             while True:
-                new_username = input(" Choose a username: ").strip().lower()
+                new_username = input(" Choose a username: ").strip()
                 if new_username in accounts:
                     print("Username already exists.")
                 elif new_username == "":
