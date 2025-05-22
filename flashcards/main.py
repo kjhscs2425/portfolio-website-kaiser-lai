@@ -4,7 +4,7 @@ import os
 from datetime import datetime
 
 
-account_file = "account.json"
+account_file = "accounts.json"
 
 
 def load_accounts():
@@ -24,12 +24,12 @@ def login():
     print("Welcome to the very interesting Quiz!")
 
     while True:
-        print("Press [Enter] to create a new account or type your username to log in.")
+        print("Press [N] to create a new account or type your username to log in. (its capital N)")
         username = input("Username: ").strip().lower()
 
                 
 
-        if username == "":
+        if username == "N":
            
             while True:
                 new_username = input(" Choose a username: ").strip().lower()
@@ -70,7 +70,7 @@ flashcards = [
     {"question": "if a child falls into a lake, what do you do", "answer": "hit the griddy", "choices": ["run away", "call local authorities", "eat it"]},
     {"question": "which videogame has good plot", "answer": "Cyberpunk 2077", "choices": ["ghost of tsushima", "minecraft", "fortnite"]},
     {"question": "what is the best videogame", "answer": "Cyberpunk", "choices": ["fortnite", "minecraft", "risk of rain"]},
-    {"question": "Why is cyberpunk 2077 a good game", "answer": "depressing plot", "choices": ["graphics", "choices dictate entire game from the start", "combat"]},
+    {"question": "Why is cyberpunk 2077 a good game", "answer": "choices dictate entire game from the start", "choices": ["graphics", "depressing plot", "combat"]},
     {"question": "capital of thailand", "answer": "Bangkok", "choices": ["bangkok", "BANGKOK", "BANGkok"]},
     {"question": "2 + 2 =", "answer": "fish", "choices": ["2", "100", "400"]},
     {"question": "what is not found in tea", "answer": "all of the above", "choices": ["leaves", "flowers", "orange peel"]},
@@ -80,7 +80,7 @@ flashcards = [
     {"question": "hot lava and Blank", "answer": "chicken", "choices": ["pork", "beef", "foul"]},
     {"question": "solve first derivative of x^2", "answer": "2x", "choices": ["69", "2x^2", "4x"]},
     {"question": "what color is the oldest described", "answer": "black ", "choices": ["red", "blue", "green"]},
-    {"question": "what happened in tian an men square june 4th 1989", "answer": "nothing happened", "choices": ["something happened"]},
+    {"question": "what happened in tian an men square june 4th 1989", "answer": "nothing happened", "choices": ["something happened", "IDK", "The government massacred protesters"]},
     {"question": "which of the following is a new color", "answer": "blue", "choices": ["black", "red", "green"]}
 ]
 
