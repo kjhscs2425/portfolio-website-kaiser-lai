@@ -25,32 +25,26 @@ def login():
 
     while True:
         print("Press [N] to create a new account or type your username to log in. (its capital N)")
-        username = input("Username: ").strip().lower()
-
-                
+        username = input("Username: ").strip()
 
         if username == "N":
-           
             while True:
-                new_username = input(" Choose a username: ").strip()
+                new_username = input("Choose a username: ").strip().lower()
                 if new_username in accounts:
                     print("Username already exists.")
                 elif new_username == "":
                     print("Username can't be blank.")
                 else:
                     break
-                username = input("Username: ").strip().lower()
-
-
-
-                
             password = input("Create a password: ").strip()
             accounts[new_username] = {"password": password}
             save_accounts(accounts)
             print(f"Account '{new_username}' created!")
             return new_username
 
-        elif username in accounts:
+        username = username.lower()
+
+        if username in accounts:
             password = input("Password: ").strip()
             if accounts[username]["password"] == password:
                 print("Login successful!")
@@ -58,8 +52,7 @@ def login():
             else:
                 print("Incorrect password.")
         else:
-            print("Username not found. Press Enter to make a new one.")
-
+            print("Username not found. Press [N] to make a new one.")
 
 flashcards = [
     {"question": "who is in paris?", "answer": "Kanye and JayZ", "choices": ["Cod word", "homies", "neighbors"]},
