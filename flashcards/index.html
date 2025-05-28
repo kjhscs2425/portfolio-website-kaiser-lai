@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <!-- Import header from `header.html`-->
+    <header id="header"></header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#header').load('./header.html', function() {
+          $('.content').css("display", "block");
+        })
+      })
+    </script>
+
+    <div class="content">
+    <!-- Your HTML starts here-->
+    <h1>Homepage of my portfolio website</h1>
+    <p>You decorate this and write whatever you want to for the homepage</p>
+    <p>(avoid photos and identifying information about yourself)</p>
+    <!-- Your HTML ends here-->
+    </div>
+
+  </body>
+</html>
