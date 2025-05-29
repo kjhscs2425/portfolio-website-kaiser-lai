@@ -4,7 +4,7 @@ import os
 from datetime import datetime
 
 
-account_file = "accounts.json"
+account_file = "account.json"
 
 
 def load_accounts():
@@ -24,35 +24,35 @@ def login():
     print("Welcome to the very interesting Quiz!")
 
     while True:
-        print("Press [N] to create a new account or type your username to log in. (its capital N)")
+        print("Press [N] to create a new account or type your username to log in.")
         username = input("Username: ").strip()
 
-        if username == "N":
+        if username == "N":  # Only matches capital N
             while True:
-                new_username = input("Choose a username: ").strip().lower()
+                new_username = input("Choose a username: ").strip()
                 if new_username in accounts:
                     print("Username already exists.")
                 elif new_username == "":
                     print("Username can't be blank.")
                 else:
                     break
+
             password = input("Create a password: ").strip()
             accounts[new_username] = {"password": password}
             save_accounts(accounts)
-            print(f"Account '{new_username}' created!")
+            print(f" Account '{new_username}' created!")
             return new_username
 
-        username = username.lower()
-
-        if username in accounts:
+        elif username in accounts:
             password = input("Password: ").strip()
             if accounts[username]["password"] == password:
-                print("Login successful!")
+                print(" Login successful!")
                 return username
             else:
-                print("Incorrect password.")
+                print(" Incorrect password.")
         else:
-            print("Username not found. Press [N] to make a new one.")
+            print(" Username not found. Press [N] to create one.")
+
 
 flashcards = [
     {"question": "who is in paris?", "answer": "Kanye and JayZ", "choices": ["Cod word", "homies", "neighbors"]},
@@ -63,7 +63,7 @@ flashcards = [
     {"question": "if a child falls into a lake, what do you do", "answer": "hit the griddy", "choices": ["run away", "call local authorities", "eat it"]},
     {"question": "which videogame has good plot", "answer": "Cyberpunk 2077", "choices": ["ghost of tsushima", "minecraft", "fortnite"]},
     {"question": "what is the best videogame", "answer": "Cyberpunk", "choices": ["fortnite", "minecraft", "risk of rain"]},
-    {"question": "Why is cyberpunk 2077 a good game", "answer": "choices dictate entire game from the start", "choices": ["graphics", "depressing plot", "combat"]},
+    {"question": "Why is cyberpunk 2077 a good game", "answer": "depressing plot", "choices": ["graphics", "choices dictate entire game from the start", "combat"]},
     {"question": "capital of thailand", "answer": "Bangkok", "choices": ["bangkok", "BANGKOK", "BANGkok"]},
     {"question": "2 + 2 =", "answer": "fish", "choices": ["2", "100", "400"]},
     {"question": "what is not found in tea", "answer": "all of the above", "choices": ["leaves", "flowers", "orange peel"]},
@@ -73,7 +73,7 @@ flashcards = [
     {"question": "hot lava and Blank", "answer": "chicken", "choices": ["pork", "beef", "foul"]},
     {"question": "solve first derivative of x^2", "answer": "2x", "choices": ["69", "2x^2", "4x"]},
     {"question": "what color is the oldest described", "answer": "black ", "choices": ["red", "blue", "green"]},
-    {"question": "what happened in tian an men square june 4th 1989", "answer": "nothing happened", "choices": ["something happened", "IDK", "The government massacred protesters"]},
+    {"question": "what happened in tian an men square june 4th 1989", "answer": "nothing happened", "choices": ["something happened"]},
     {"question": "which of the following is a new color", "answer": "blue", "choices": ["black", "red", "green"]}
 ]
 
