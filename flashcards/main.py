@@ -73,7 +73,7 @@ flashcards = [
     {"question": "hot lava and Blank", "answer": "chicken", "choices": ["pork", "beef", "foul"]},
     {"question": "solve first derivative of x^2", "answer": "2x", "choices": ["69", "2x^2", "4x"]},
     {"question": "what color is the oldest described", "answer": "black ", "choices": ["red", "blue", "green"]},
-    {"question": "what happened in tian an men square june 4th 1989", "answer": "nothing happened", "choices": ["something happened"]},
+    {"question": "what happened in tian an men square june 4th 1989", "answer": "nothing happened", "choices": ["something happened", "IDK", "I have dementia"]},
     {"question": "which of the following is a new color", "answer": "blue", "choices": ["black", "red", "green"]}
 ]
 
